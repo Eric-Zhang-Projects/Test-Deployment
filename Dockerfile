@@ -4,11 +4,9 @@ WORKDIR /app
 COPY package.json .
 RUN npm install
 COPY . .
-
 # Development Env - Starts app on local machine
 # EXPOSE 3000
 # CMD ["npm", "start"]
-
 #Production Env - Creates static files
 RUN npm run build
 
