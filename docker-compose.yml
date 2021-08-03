@@ -1,0 +1,22 @@
+version: '3'
+services:
+    test-deployment-production:
+        build:
+          context: .
+          dockerfile: Dockerfile
+        # Nginx runs on port 80
+        ports:
+          # Target Port : Origin Port
+          - '80:80'
+        volumes:
+            []
+
+
+#   test-deployment-development:
+#     build:
+#       context: .
+#       dockerfile: Dockerfile
+#     ports:
+#       - '3000:3000'
+#     volumes:
+#         []
